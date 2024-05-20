@@ -5,7 +5,7 @@ SCRIPTNAME=`basename ${SCRIPT}`
 cd ${SCRIPTPATH}
 set -euo pipefail
 
-export DISPLAY=:1
+export DISPLAY=:0
 xhost +
 #docker rm -f deepstream
 sudo rm -rf /tmp/.X11-unix

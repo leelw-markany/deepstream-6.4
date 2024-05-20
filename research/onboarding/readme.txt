@@ -1,3 +1,5 @@
+# sudo apt install x11-xserver-utils
+
 # 참고용 소스
 https://github.com/NVIDIA-AI-IOT/deepstream_reference_apps/
 
