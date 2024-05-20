@@ -1,0 +1,4 @@
+*.o
+deepstream-app
+reid-track-output
+out.mp4

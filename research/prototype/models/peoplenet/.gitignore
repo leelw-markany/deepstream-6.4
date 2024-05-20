@@ -1,0 +1,5 @@
+deployable_quantized_v2.6.1.zip
+labels.txt
+resnet34_peoplenet_int8.etlt
+resnet34_peoplenet_int8.txt
+*.engine

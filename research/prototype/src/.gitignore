@@ -1,0 +1,4 @@
+*.o
+prototype-app
+supervisord.log
+supervisord.pid

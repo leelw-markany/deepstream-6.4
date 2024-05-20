@@ -1,0 +1,31 @@
+[property]
+## model-specific params. The paths will be different if the user sets up in different directory.
+int8-calib-file=../../prototype/models/peoplenet/resnet34_peoplenet_int8.txt
+labelfile-path=../../prototype/models/peoplenet/labels.txt
+tlt-encoded-model=../../prototype/models/peoplenet/resnet34_peoplenet_int8.etlt
+tlt-model-key=tlt_encode
+
+gpu-id=0
+net-scale-factor=0.0039215697906911373
+input-dims=3;544;960;0
+uff-input-blob-name=input_1
+process-mode=1
+model-color-format=0
+## 0=FP32, 1=INT8, 2=FP16 mode
+network-mode=1
+num-detected-classes=3
+interval=0
+gie-unique-id=1
+output-blob-names=output_cov/Sigmoid;output_bbox/BiasAdd
+## 1=DBSCAN, 2=NMS, 3= DBSCAN+NMS Hybrid, 4 = None(No clustering)
+cluster-mode=3
+maintain-aspect-ratio=1
+
+[class-attrs-all]
+pre-cluster-threshold=0.1653
+nms-iou-threshold=0.5242
+minBoxes=2
+dbscan-min-score=1.7550
+eps=0.1702
+detected-min-w=20
+detected-min-h=20

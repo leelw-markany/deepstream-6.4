@@ -1,0 +1,5 @@
+enable,type,uri,num-sources,gpu-id,nvbuf-memory-type
+1,4,rtsp://admin:alchera1@192.168.1.45/ISAPI/Streaming/channels/301,1,0,0
+1,4,rtsp://admin:alchera1@192.168.1.45/ISAPI/Streaming/channels/601,1,0,0
+1,4,rtsp://admin:alchera1@192.168.1.45/ISAPI/Streaming/channels/701,1,0,0
+1,4,rtsp://admin:alchera1@192.168.1.45/ISAPI/Streaming/channels/1101,1,0,0
