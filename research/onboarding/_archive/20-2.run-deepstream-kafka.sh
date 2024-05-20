@@ -5,10 +5,7 @@ SCRIPTNAME=`basename ${SCRIPT}`
 cd ${SCRIPTPATH}
 set -euo pipefail
 
-#export DISPLAY=:1
-#export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2}'):0
-export DISPLAY=$(grep -oP "(?<=nameserver ).+" /etc/resolv.conf):0
-
+export DISPLAY=:1
 xhost +
 #docker rm -f deepstream-kafka
 sudo rm -rf /tmp/.X11-unix
@@ -25,6 +22,7 @@ docker run -d \
   -v ./deepstream_reference_apps/:/opt/nvidia/deepstream/deepstream-6.4/sources/apps/deepstream_reference_apps \
   -e DISPLAY=$DISPLAY \
   -e CUDA_CACHE_DISABLE=0 \
+  --device /dev/snd \
   deepstream-kafka:6.4
 
 docker exec -it deepstream-kafka /bin/bash

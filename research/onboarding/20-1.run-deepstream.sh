@@ -5,7 +5,10 @@ SCRIPTNAME=`basename ${SCRIPT}`
 cd ${SCRIPTPATH}
 set -euo pipefail
 
-export DISPLAY=:0
+#export DISPLAY=:1
+#export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2}'):0
+export DISPLAY=$(grep -oP "(?<=nameserver ).+" /etc/resolv.conf):0
+
 xhost +
 #docker rm -f deepstream
 sudo rm -rf /tmp/.X11-unix
@@ -23,7 +26,6 @@ docker run -it \
   -v ./deepstream_reference_apps/:/opt/nvidia/deepstream/deepstream-6.4/sources/apps/deepstream_reference_apps \
   -e DISPLAY=$DISPLAY \
   -e CUDA_CACHE_DISABLE=0 \
-  --device /dev/snd \
   deepstream:6.4
 
 exit $?
