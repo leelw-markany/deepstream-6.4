@@ -51,8 +51,8 @@ source:
   #<-- 영상소스파일
   # csv-file-path: sources_4.csv
   #---
-  #csv-file-path: _sources_4.csv
-  csv-file-path: _sources_rtsp.csv
+  csv-file-path: _sources_4.csv
+  #csv-file-path: _sources_rtsp.csv
   #-->
 
 #<--
