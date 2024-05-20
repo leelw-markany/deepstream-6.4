@@ -25,11 +25,11 @@ RUN apt install -y openjdk-8-jdk
 ENV JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64/jre/
 
 RUN mkdir /opt/apache/
-RUN wget 'https://downloads.apache.org/kafka/3.6.1/kafka_2.13-3.6.1.tgz' -P /opt/apache/
+RUN wget 'https://downloads.apache.org/kafka/3.6.2/kafka_2.13-3.6.2.tgz' -P /opt/apache/
 
 WORKDIR /opt/apache/
-RUN tar -zxf kafka_2.13-3.6.1.tgz
-RUN ln -s ./kafka_2.13-3.6.1 ./kafka
+RUN tar -zxf kafka_2.13-3.6.2.tgz
+RUN ln -s ./kafka_2.13-3.6.2 ./kafka
 #WORKDIR /opt/apache/kafka
 
 ENV PATH=/opt/apache/kafka/bin/:$PATH
