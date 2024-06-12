@@ -282,4 +282,4 @@ tracker:
   display-tracking-id: 1
 
 tests:
-  file-loop: 0
+  file-loop: 1
