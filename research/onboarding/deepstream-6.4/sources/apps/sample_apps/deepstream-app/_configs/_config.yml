@@ -62,7 +62,7 @@ sink00:
 #-->
   enable: 1
   #Type - 1=FakeSink 2=EglSink 3=File
-  type: 2
+  type: 1
   sync: 1
   source-id: 0
   gpu-id: 0
@@ -73,7 +73,7 @@ sink00:
 sink01:
   enable: 1
   #Type - 1=FakeSink 2=EglSink 3=File
-  type: 2
+  type: 1
   sync: 1
   source-id: 1
   gpu-id: 0
@@ -85,7 +85,7 @@ sink01:
 sink02:
   enable: 1
   #Type - 1=FakeSink 2=EglSink 3=File
-  type: 2
+  type: 1
   sync: 1
   source-id: 2
   gpu-id: 0
@@ -97,7 +97,7 @@ sink02:
 sink03:
   enable: 1
   #Type - 1=FakeSink 2=EglSink 3=File
-  type: 2
+  type: 1
   sync: 1
   source-id: 3
   gpu-id: 0
@@ -161,7 +161,7 @@ sink20:
 #<--
 #---
 sink30:
-  enable: 0
+  enable: 1
   #Type - 1=FakeSink 2=EglSink 3=File 4=RTSPStreaming
   type: 4
   #1=h264 2=h265
@@ -254,7 +254,7 @@ primary-gie:
   # labelfile-path: ../../../../../samples/models/Primary_Detector/labels.txt
   # config-file: ../../../../../samples/configs/deepstream-app/config_infer_primary.yml
   #--- Use PeopleNet as PGIE
-  #model-engine-file: ../../../../../samples/models/peoplenet/resnet34_peoplenet_int8.etlt_b4_gpu0_int8.engine
+  model-engine-file: ../../../../../samples/models/peoplenet/resnet34_peoplenet_int8.etlt_b4_gpu0_int8.engine
   labelfile-path: ../../../../../samples/models/peoplenet/labels.txt
   #config-file: ../../../../../samples/configs/deepstream-app/_config_infer_primary_PeopleNet-NvDCF.txt
   config-file: ../../../../../samples/configs/deepstream-app/_config_infer_primary_PeopleNet-NvDeepSORT.txt
