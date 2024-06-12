@@ -162,7 +162,6 @@ sink20:
 #---
 sink30:
   enable: 0
-  #-->
   #Type - 1=FakeSink 2=EglSink 3=File 4=RTSPStreaming
   type: 4
   #1=h264 2=h265
