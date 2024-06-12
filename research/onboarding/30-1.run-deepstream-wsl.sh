@@ -40,6 +40,8 @@ docker run -it \
   -v ./deepstream-6.4/sources/objectDetector_Yolo/:/opt/nvidia/deepstream/deepstream-6.4/sources/objectDetector_Yolo \
   -v ./deepstream-6.4/sources/tracker_ReID/:/opt/nvidia/deepstream/deepstream-6.4/sources/tracker_ReID \
   -v ./deepstream_reference_apps/:/opt/nvidia/deepstream/deepstream-6.4/sources/apps/deepstream_reference_apps \
+  -p 8554:8554 \
+  -p 5400:5400 \
   -e DISPLAY=$DISPLAY \
   -e CUDA_CACHE_DISABLE=0 \
   deepstream:6.4
